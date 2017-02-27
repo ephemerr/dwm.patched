@@ -1,0 +1,1 @@
+/home/azzel/favconf/dwm/config.h
