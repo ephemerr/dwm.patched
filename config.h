@@ -30,15 +30,17 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Dolphin",        NULL,       NULL,       1 << 1,       0,       -1 },
 	{ "Thunar",         NULL,       NULL,       1 << 1,       0,       -1 },
+	{ "Pcmanfm",        NULL,       NULL,       1 << 1,       0,       -1 },
 	{ "Google",         NULL,       NULL,       1 << 2,       0,       -1 },
 	{ "google-chrome",  NULL,       NULL,       1 << 2,       0,       -1 },
 	{ "Firefox",        NULL,       NULL,       1 << 2,       0,       -1 },
 	{ "Qtcreator",      NULL,       NULL,       1 << 3,       0,       -1 },
 	{ "QtCreator",      NULL,       NULL,       1 << 3,       0,       -1 },
-	{ "PV_WTC",         NULL,       NULL,       1 << 3,       1,       -1 },
 	{ "Pidgin",         NULL,       NULL,       1 << 4,       1,       -1 },
 	{ "VirtualBox",     NULL,       NULL,       1 << 5,       0,       -1 },
 	{ "Gimp",           NULL,       NULL,       1 << 6,       1,       -1 },
+	{ "PV_WTC",         NULL,       NULL,       1 << 3,       1,       -1 },
+	{ "qmlscene",       NULL,       NULL,       1 << 1,       1,       -1 },
 };
 
 /* layout(s) */
@@ -68,12 +70,10 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "xterm", NULL };
-static const char *lockcmd[]  = { "slock", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_l,      spawn,          {.v = lockcmd} },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -87,7 +87,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
-	{ Mod1Mask,                     XK_F4,     killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
