@@ -36,11 +36,12 @@ static const Rule rules[] = {
 	{ "Firefox",        NULL,       NULL,       1 << 2,       0,       -1 },
 	{ "Qtcreator",      NULL,       NULL,       1 << 3,       0,       -1 },
 	{ "QtCreator",      NULL,       NULL,       1 << 3,       0,       -1 },
-	{ "Pidgin",         NULL,       NULL,       1 << 4,       1,       -1 },
-	{ "VirtualBox",     NULL,       NULL,       1 << 5,       0,       -1 },
+	{ "VirtualBox",     NULL,       NULL,       1 << 6,       0,       -1 },
 	{ "Gimp",           NULL,       NULL,       1 << 6,       1,       -1 },
 	{ "PV_WTC",         NULL,       NULL,       1 << 3,       1,       -1 },
 	{ "qmlscene",       NULL,       NULL,       1 << 1,       1,       -1 },
+	{ "Pidgin",         NULL,       NULL,       1 << 7,       1,       -1 },
+	{ "TelegramDesktop",NULL,       NULL,       1 << 7,       0,       -1 },
 };
 
 /* layout(s) */
