@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "qmlscene",       NULL,       NULL,       1 << 1,       1,       -1 },
 	{ "Pidgin",         NULL,       NULL,       1 << 7,       1,       -1 },
 	{ "TelegramDesktop",NULL,       NULL,       1 << 7,       0,       -1 },
+	{ "Zenity",         NULL,       NULL,       0xFF,         1,       -1 },
 };
 
 /* layout(s) */
